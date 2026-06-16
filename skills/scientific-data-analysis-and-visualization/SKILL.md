@@ -64,6 +64,9 @@ Prefer repository-native tools:
   or domain-specific plotting tools;
 - command-line workflows may produce CSV, JSON, Parquet, NetCDF, HDF5, images,
   or Markdown/HTML reports.
+- command-line workflows may use `gnuplot` when it is available and the
+  project benefits from lightweight, scriptable plotting without a larger
+  language runtime.
 
 Do not migrate plotting frameworks only for preference. Change tools only when
 the current stack cannot represent the analysis clearly, reproducibly, or
@@ -102,6 +105,35 @@ Avoid:
 - truncated axes that exaggerate differences without disclosure;
 - pie charts for scientific comparison work;
 - excessive smoothing that hides data or implies unsupported continuity.
+
+## Command-Line Plotting
+
+Use `gnuplot` as a practical option when:
+
+- the project already has command-line data products such as CSV or TSV files;
+- plots should be generated in shell-oriented workflows or batch jobs;
+- installing a full Python/R/Julia plotting stack would be unnecessary;
+- the desired output is a simple, reproducible line, scatter, histogram, or
+  comparison plot.
+
+Keep `gnuplot` scripts under version control when they are part of the
+repository contract. Make input filenames, output filenames, terminal type, axis
+labels, units, and legends explicit.
+
+Prefer a checked-in script such as:
+
+```text
+scripts/plot-results.gp
+```
+
+with a documented command:
+
+```bash
+gnuplot scripts/plot-results.gp
+```
+
+Do not use ad hoc interactive `gnuplot` sessions as the only way to reproduce a
+figure.
 
 ## Uncertainty and Variability
 
