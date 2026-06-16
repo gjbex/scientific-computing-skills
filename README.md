@@ -39,6 +39,9 @@ workflows. Those belong in a separate HPC operations skill package.
   inputs, configs, and run metadata needed for repeatable results.
 - `scientific-testing`: numerical, stochastic, regression, and
   parallel-consistency tests for scientific software.
+- `scientific-workflow-automation`: Nextflow-first workflow automation for
+  reproducible multi-step scientific pipelines that should scale from laptops
+  to HPC clusters or cloud executors.
 
 ## Support Skills
 
@@ -59,6 +62,9 @@ Use `scientific-performance-portability` when an optimization must generalize
 beyond one machine or compiler.
 Use `scientific-reproducibility` when results need to be rerunnable and
 auditable.
+Use `scientific-workflow-automation` when ad hoc shell steps should become a
+version-controlled workflow, with Nextflow as the preferred default for
+multi-step pipelines.
 
 ## Layout
 
@@ -142,6 +148,9 @@ Compile bundled Python scripts:
 ```bash
 python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
 ```
+
+See `CONTRIBUTIONS.md` for contribution scope, repository hygiene, and pull
+request expectations.
 
 ## Publication Notes
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Workflow Automation"
+  short_description: "Build reproducible Nextflow-first scientific workflows"
+  default_prompt: "Use $scientific-workflow-automation to design or improve a reproducible scientific workflow, preferring Nextflow for multi-step pipelines that should scale from laptops to HPC or cloud executors."
