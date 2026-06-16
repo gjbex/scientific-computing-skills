@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Release And Publication"
+  short_description: "Prepare scientific software for public release"
+  default_prompt: "Use $scientific-release-and-publication to prepare a scientific repository for public release, including versioning, release notes, citation metadata, DOI workflow, and artifact hygiene."
