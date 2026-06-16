@@ -36,6 +36,9 @@ workflows. Those belong in a separate HPC operations skill package.
   checkpointing, portability, reproducibility, and I/O performance tradeoffs.
 - `scientific-numerics-review`: numerical stability, conditioning,
   convergence, tolerances, invariants, and scientific correctness risks.
+- `scientific-notebook-workflows`: reproducible scientific notebook workflows,
+  including output policy, CI smoke checks, reusable logic, and intentional
+  report/demo notebooks with committed outputs.
 - `scientific-package-management`: Python-first scientific package layout and
   environment management, with lighter guidance for R and Julia projects.
 - `scientific-parallel-debugging`: debugging races, deadlocks,
@@ -82,6 +85,8 @@ Use `scientific-data-management` when raw data, processed data, fixtures,
 generated outputs, large artifacts, checksums, or DVC boundaries need to be
 made explicit.
 Use `scientific-numerics-review` for mathematical and floating-point risks.
+Use `scientific-notebook-workflows` when notebooks need reproducibility,
+reviewable output policy, CI smoke checks, or intentional report/demo outputs.
 Use `scientific-performance-portability` when an optimization must generalize
 beyond one machine or compiler.
 Use `scientific-release-and-publication` when a repository is being prepared

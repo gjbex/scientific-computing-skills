@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Notebook Workflows"
+  short_description: "Maintain reproducible scientific notebooks"
+  default_prompt: "Use $scientific-notebook-workflows to improve scientific notebooks, including reproducibility, output policy, CI smoke checks, reusable logic, and report or demo notebooks with intentional outputs."
