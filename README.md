@@ -71,6 +71,9 @@ workflows. Those belong in a separate HPC operations skill package.
 
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
+Use `project-repository-setup` for baseline local hooks, repository layout, and
+local command entry points. Use `scientific-ci` for CI job design and GitHub
+Actions workflow details.
 Use `scientific-profiling` when benchmark results need root-cause diagnosis.
 Use `scientific-data-analysis-and-visualization` when scientific outputs need
 defensible figures, tables, summaries, uncertainty handling, or comparison

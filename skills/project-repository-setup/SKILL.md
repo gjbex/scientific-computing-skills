@@ -145,6 +145,15 @@ tool.
 Local and CI workflows should validate the same contract unless there is an
 explicit reason to split them.
 
+For GitHub-hosted projects, GitHub Actions is a practical default CI target.
+Keep workflow files under `.github/workflows/`, run documented local commands
+inside jobs, avoid broad permissions, and keep release or deployment automation
+separate from ordinary validation unless the repository deliberately uses CI/CD.
+
+Use `scientific-ci` for scientific CI design details such as build matrices,
+numerical validation, artifacts, GitHub Actions job structure, and portability
+tradeoffs.
+
 ## Anti-Patterns
 
 - creating many empty directories with no current purpose;

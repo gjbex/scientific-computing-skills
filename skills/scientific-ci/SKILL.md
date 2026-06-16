@@ -142,6 +142,32 @@ benchmarking.
 
 When examples or docs drift from the code, CI is a useful backstop.
 
+## GitHub Actions
+
+For GitHub-hosted scientific projects, GitHub Actions is a practical default CI
+platform.
+
+- Keep workflows under `.github/workflows/`.
+- Use `pull_request` for review validation and `push` for protected or release
+  branches when appropriate.
+- Run repository-documented local commands inside CI jobs rather than creating a
+  separate hidden CI-only command path.
+- Use job names that describe the validation contract, such as `build`,
+  `test`, `docs`, `lint`, `sanitize`, or `validate`.
+- Keep permissions minimal; start from read-only defaults unless a workflow
+  must publish artifacts, comments, packages, or releases.
+- Use matrices only where variation catches real risk, such as compiler,
+  Python version, build type, or dependency backend.
+- Cache dependencies cautiously and make cache failures non-fatal when possible.
+- Upload compact logs, reports, or failure artifacts when they materially help
+  diagnosis.
+- Keep release, package publishing, and deployment workflows separate from
+  ordinary PR validation unless the project has a deliberate CI/CD contract.
+
+Avoid GitHub Actions workflows that assume private runners, hidden data, cluster
+queues, site modules, or machine-local paths unless those jobs are clearly
+marked as optional or environment-specific.
+
 ## Anti-Patterns
 
 - CI matrices so large that failures are ignored;
