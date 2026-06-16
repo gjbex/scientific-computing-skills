@@ -4,6 +4,7 @@ title: "Scientific Computing Skills"
 type: software
 repository-code: "https://github.com/gjbex/scientific-computing-skills"
 url: "https://github.com/gjbex/scientific-computing-skills"
+doi: "10.5281/zenodo.20723947"
 authors:
   - family-names: Bex
     given-names: Geert Jan

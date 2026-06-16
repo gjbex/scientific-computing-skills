@@ -214,3 +214,5 @@ applicable.
 
 If you use this project or derive work from it, please cite it using the
 metadata in `CITATION.cff`.
+
+Archived release DOI: [10.5281/zenodo.20723947](https://doi.org/10.5281/zenodo.20723947).
