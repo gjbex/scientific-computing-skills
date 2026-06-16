@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Parallel Debugging"
+  short_description: "Debug parallel scientific correctness failures"
+  default_prompt: "Use $scientific-parallel-debugging to diagnose a parallel bug in scientific software and summarize the reproduction setup, leading hypotheses, and next isolation step."

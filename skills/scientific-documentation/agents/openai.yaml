@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Documentation"
+  short_description: "Document scientific workflows and assumptions"
+  default_prompt: "Use $scientific-documentation to improve documentation for scientific software, then summarize the workflows, assumptions, examples, and validation context that were clarified."

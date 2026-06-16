@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Numerics Review"
+  short_description: "Review numerical stability and correctness risks"
+  default_prompt: "Use $scientific-numerics-review to review scientific code for numerical stability, convergence, tolerance, and scientifically meaningful correctness risks."

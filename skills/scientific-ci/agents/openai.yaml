@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific CI"
+  short_description: "Design CI for scientific and HPC repositories"
+  default_prompt: "Use $scientific-ci to improve CI for scientific software, then summarize the build matrix, validation coverage, artifacts, and remaining flakiness or portability risks."

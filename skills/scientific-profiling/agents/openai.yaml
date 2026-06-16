@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Profiling"
+  short_description: "Profile bottlenecks in scientific C/C++ and Python code"
+  default_prompt: "Use $scientific-profiling to diagnose a performance bottleneck in scientific software, including Python workloads, and summarize the main hotspots, limiting resource, and best next optimization target."

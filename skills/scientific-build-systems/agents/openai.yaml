@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Build Systems"
+  short_description: "Maintain build config for scientific and HPC code"
+  default_prompt: "Use $scientific-build-systems to update a scientific project's build configuration and summarize the build-policy changes, validation steps, and remaining portability risks."

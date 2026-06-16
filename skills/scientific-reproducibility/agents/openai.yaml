@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Reproducibility"
+  short_description: "Capture reproducible scientific run context"
+  default_prompt: "Use $scientific-reproducibility to make a scientific workflow easier to rerun and audit, then summarize what metadata is captured and what assumptions still remain."

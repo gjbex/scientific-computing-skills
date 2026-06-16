@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific CLI Design"
+  short_description: "Design reproducible CLIs for scientific codes"
+  default_prompt: "Use $scientific-cli-design to improve a scientific program's CLI, then summarize the argument design, validation behavior, output conventions, and batch/reproducibility implications."

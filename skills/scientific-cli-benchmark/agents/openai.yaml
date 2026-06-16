@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific CLI Benchmark"
+  short_description: "Benchmark scientific and HPC CLI applications"
+  default_prompt: "Use $scientific-cli-benchmark to benchmark a scientific command-line application and summarize scaling or placement results."

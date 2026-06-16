@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Performance Portability"
+  short_description: "Keep scientific optimizations portable across platforms"
+  default_prompt: "Use $scientific-performance-portability to review or improve an optimization so it remains performant across compilers, CPUs, and cluster environments, then summarize the portability tradeoffs and remaining untested assumptions."

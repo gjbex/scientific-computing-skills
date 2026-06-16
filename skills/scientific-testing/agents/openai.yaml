@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Testing"
+  short_description: "Add tests for numerical and parallel scientific code"
+  default_prompt: "Use $scientific-testing to add or review tests for scientific software, with justified tolerances, regression checks, and parallel-correctness coverage."

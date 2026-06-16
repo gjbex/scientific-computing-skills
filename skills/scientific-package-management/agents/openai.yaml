@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Package Management"
+  short_description: "Organize scientific Python, R, and Julia projects"
+  default_prompt: "Use $scientific-package-management to improve dependency management, environment setup, or project layout for a scientific Python, R, or Julia repository, with Python-first practical defaults."

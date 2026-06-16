@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use or derive work from this project, please cite it as below."
+title: "Scientific Computing Skills"
+type: software
+authors:
+  - family-names: Bex
+    given-names: Geert Jan
+email: geertjan.bex@uhasselt.be
+version: 0.1.0
+date-released: 2026-06-16
+license: Apache-2.0
+abstract: >-
+  Codex plugin distribution with skills for scientific-computing software
+  engineering, numerical validation, benchmarking, profiling, reproducibility,
+  package management, documentation, and parallel debugging.

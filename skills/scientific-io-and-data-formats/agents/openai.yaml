@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific I/O And Data Formats"
+  short_description: "Design scientific file formats and I/O paths"
+  default_prompt: "Use $scientific-io-and-data-formats to improve scientific I/O or file-format design, then summarize the schema choices, metadata handling, validation, and performance or reproducibility tradeoffs."

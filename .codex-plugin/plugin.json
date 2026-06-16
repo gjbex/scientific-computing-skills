@@ -1,0 +1,36 @@
+{
+  "name": "scientific-computing-skills",
+  "version": "0.1.0",
+  "description": "Codex skills for scientific-computing software engineering, numerical validation, performance work, and reproducible workflows.",
+  "author": {
+    "name": "Geert Jan Bex",
+    "email": "geertjan.bex@uhasselt.be"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "scientific-computing",
+    "hpc",
+    "numerics",
+    "testing",
+    "profiling",
+    "reproducibility"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Scientific Computing Skills",
+    "shortDescription": "Engineering guidance for scientific and HPC codebases.",
+    "longDescription": "A focused Codex skill bundle for scientific software work: build systems, CI, CLI design, numerical testing, profiling, benchmarking, reproducibility, package management, data formats, documentation, and parallel debugging.",
+    "developerName": "Geert Jan Bex",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Review this scientific code for numerical risks.",
+      "Add reproducible tests for this solver.",
+      "Profile this benchmark and explain the bottleneck."
+    ],
+    "brandColor": "#1F7A5C"
+  }
+}
