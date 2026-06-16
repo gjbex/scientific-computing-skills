@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use or derive work from this project, please cite it as below."
 title: "Scientific Computing Skills"
 type: software
+repository-code: "https://github.com/gjbex/scientific-computing-skills"
+url: "https://github.com/gjbex/scientific-computing-skills"
 authors:
   - family-names: Bex
     given-names: Geert Jan

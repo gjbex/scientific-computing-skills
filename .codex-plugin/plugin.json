@@ -6,6 +6,8 @@
     "name": "Geert Jan Bex",
     "email": "geertjan.bex@uhasselt.be"
   },
+  "homepage": "https://github.com/gjbex/scientific-computing-skills",
+  "repository": "https://github.com/gjbex/scientific-computing-skills",
   "license": "Apache-2.0",
   "keywords": [
     "scientific-computing",
