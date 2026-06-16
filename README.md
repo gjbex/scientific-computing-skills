@@ -115,14 +115,19 @@ Start a new Codex thread after reinstalling.
 Validate the plugin manifest with:
 
 ```bash
-python3 ~/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py .
+python3 tools/validate_plugin.py .
 ```
 
-Validate individual skills with:
+Validate bundled skills with:
 
 ```bash
-python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-  skills/scientific-testing
+python3 tools/validate_skills.py skills
+```
+
+Compile bundled Python scripts:
+
+```bash
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
 ```
 
 ## Publication Notes
