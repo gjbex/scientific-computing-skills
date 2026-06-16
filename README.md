@@ -27,6 +27,9 @@ workflows. Those belong in a separate HPC operations skill package.
 - `scientific-data-analysis-and-visualization`: language-agnostic guidance for
   defensible scientific analysis, figures, tables, summaries, uncertainty,
   comparisons, and reproducible analysis artifacts.
+- `scientific-data-management`: scientific data boundaries, reference
+  fixtures, generated outputs, checksums, provenance, large artifacts, Git
+  hygiene, and optional DVC usage.
 - `scientific-documentation`: user and developer documentation for algorithms,
   assumptions, parameters, workflows, reproducibility, and performance context.
 - `scientific-io-and-data-formats`: scientific file layout, metadata,
@@ -72,6 +75,9 @@ Use `scientific-profiling` when benchmark results need root-cause diagnosis.
 Use `scientific-data-analysis-and-visualization` when scientific outputs need
 defensible figures, tables, summaries, uncertainty handling, or comparison
 reports.
+Use `scientific-data-management` when raw data, processed data, fixtures,
+generated outputs, large artifacts, checksums, or DVC boundaries need to be
+made explicit.
 Use `scientific-numerics-review` for mathematical and floating-point risks.
 Use `scientific-performance-portability` when an optimization must generalize
 beyond one machine or compiler.

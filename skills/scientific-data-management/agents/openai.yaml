@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Data Management"
+  short_description: "Manage scientific data boundaries and provenance"
+  default_prompt: "Use $scientific-data-management to organize scientific data, reference fixtures, generated outputs, checksums, provenance, large artifacts, and optional DVC usage."
