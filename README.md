@@ -61,6 +61,55 @@ scientific-computing-skills/
       SKILL.md
 ```
 
+## Installation
+
+Clone the plugin into the standard local plugin directory:
+
+```bash
+mkdir -p ~/plugins
+git clone https://github.com/gjbex/scientific-computing-skills.git \
+  ~/plugins/scientific-computing-skills
+```
+
+Create or update the personal Codex marketplace entry:
+
+```bash
+python3 ~/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py \
+  scientific-computing-skills \
+  --path ~/plugins \
+  --with-marketplace \
+  --force
+```
+
+Install the plugin from the personal marketplace:
+
+```bash
+codex plugin add scientific-computing-skills@personal
+```
+
+Start a new Codex thread after installation so the newly installed skills are
+available in the session.
+
+## Updating
+
+Update the local checkout:
+
+```bash
+git -C ~/plugins/scientific-computing-skills pull --ff-only
+```
+
+Refresh the plugin version cachebuster and reinstall from the personal
+marketplace:
+
+```bash
+python3 ~/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py \
+  ~/plugins/scientific-computing-skills
+
+codex plugin add scientific-computing-skills@personal
+```
+
+Start a new Codex thread after reinstalling.
+
 ## Validation
 
 Validate the plugin manifest with:
