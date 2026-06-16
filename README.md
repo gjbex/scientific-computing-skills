@@ -24,6 +24,9 @@ workflows. Those belong in a separate HPC operations skill package.
 - `scientific-container-workflows`: Apptainer-first scientific container
   workflows, with Docker or Podman as local options and HPCCM recipes as the
   preferred source of truth for non-trivial definition files.
+- `scientific-data-analysis-and-visualization`: language-agnostic guidance for
+  defensible scientific analysis, figures, tables, summaries, uncertainty,
+  comparisons, and reproducible analysis artifacts.
 - `scientific-documentation`: user and developer documentation for algorithms,
   assumptions, parameters, workflows, reproducibility, and performance context.
 - `scientific-io-and-data-formats`: scientific file layout, metadata,
@@ -38,8 +41,14 @@ workflows. Those belong in a separate HPC operations skill package.
   compilers, CPUs, node layouts, and cluster environments.
 - `scientific-profiling`: profiling CPU, memory, cache, synchronization,
   vectorization, scaling, and Python/native numerical workloads.
+- `scientific-release-and-publication`: public release preparation, versioning,
+  citation metadata, DOI workflows, release notes, artifact hygiene, and
+  publication-ready repository checks.
 - `scientific-reproducibility`: capturing seeds, environments, toolchains,
   inputs, configs, and run metadata needed for repeatable results.
+- `scientific-review`: broad scientific-code and repository review for
+  correctness, validation, reproducibility, performance, documentation, and
+  release-readiness risks.
 - `scientific-testing`: numerical, stochastic, regression, and
   parallel-consistency tests for scientific software.
 - `scientific-workflow-automation`: Nextflow-first workflow automation for
@@ -60,11 +69,19 @@ workflows. Those belong in a separate HPC operations skill package.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
 Use `scientific-profiling` when benchmark results need root-cause diagnosis.
+Use `scientific-data-analysis-and-visualization` when scientific outputs need
+defensible figures, tables, summaries, uncertainty handling, or comparison
+reports.
 Use `scientific-numerics-review` for mathematical and floating-point risks.
 Use `scientific-performance-portability` when an optimization must generalize
 beyond one machine or compiler.
+Use `scientific-release-and-publication` when a repository is being prepared
+for public release, citation, archival, or DOI-backed reuse.
 Use `scientific-reproducibility` when results need to be rerunnable and
 auditable.
+Use `scientific-review` for broad scientific repository or pull-request
+reviews. Use `scientific-numerics-review` for deeper numerical stability,
+convergence, and tolerance concerns.
 Use `scientific-container-workflows` when a scientific runtime needs portable
 container recipes, especially for Apptainer/Singularity on HPC systems.
 Use `scientific-workflow-automation` when ad hoc shell steps should become a

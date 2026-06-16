@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Data Analysis And Visualization"
+  short_description: "Analyze and visualize scientific results defensibly"
+  default_prompt: "Use $scientific-data-analysis-and-visualization to analyze scientific outputs and produce defensible tables, figures, summaries, uncertainty handling, and reproducible analysis artifacts."
