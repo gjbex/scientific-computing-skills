@@ -166,6 +166,10 @@ Pin the HPCCM version when exact generated output stability matters. If an
 HPCCM upgrade changes generated definitions, treat the `.def` diff as a
 reviewed generated-file update.
 
+Use `developer-tool-installation-policy` when deciding whether HPCCM is only a
+personal drafting tool or a project-pinned generator that must be installed in
+CI and documented for contributors.
+
 ## Dependencies and Host Coupling
 
 - Document compiler, MPI, CUDA, BLAS/LAPACK, HDF5, NetCDF, and language runtime

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Developer Tool Installation Policy"
+  short_description: "Choose project-local or global CLI tool installs"
+  default_prompt: "Use $developer-tool-installation-policy to decide whether tools like ruff, dvc, hpccm, pre-commit, nextflow, or quarto belong in project metadata, CI/pre-commit config, or isolated global installs."

@@ -160,6 +160,10 @@ the extra findings.
 - If tools are unavailable, state that explicitly rather than assuming
   compliance.
 
+Use `developer-tool-installation-policy` when deciding whether formatters,
+linters, or static-analysis tools should be project-pinned through repository
+configuration or installed globally for ad hoc inspection.
+
 ## Testing Defaults
 
 - Add automated tests for major functionality when feasible.

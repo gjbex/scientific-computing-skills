@@ -96,6 +96,10 @@ scripts into the root.
 Treat expensive tests, flaky integration checks, or environment-specific
 validation as poor pre-commit defaults.
 
+Use `developer-tool-installation-policy` when deciding whether tools used by
+hooks, local commands, or CI should be project-pinned or installed as isolated
+global CLIs.
+
 ## Local Developer Commands
 
 - Provide one obvious command path for setup, test, format, and lint when the

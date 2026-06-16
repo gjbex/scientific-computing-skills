@@ -113,6 +113,10 @@ performance lab.
 If a job is noisy or flaky, fix the cause or narrow its scope rather than
 teaching people to ignore it.
 
+Use `developer-tool-installation-policy` when deciding whether CI tools such as
+`ruff`, `dvc`, `hpccm`, `pre-commit`, `quarto`, or `nextflow` must be pinned in
+the project rather than assumed from a runner's global state.
+
 ## Artifacts and Diagnostics
 
 - Upload logs, test reports, or small failure artifacts when they aid triage.

@@ -17,6 +17,7 @@ primary intent, then use secondary skills for follow-up implementation details.
 | Improve GPU or accelerator portability | `scientific-accelerator-portability` |
 | Configure CMake, compiler warnings, build types, or sanitizers | `scientific-build-systems` |
 | Design or improve CI jobs, matrices, artifacts, or GitHub Actions workflows | `scientific-ci` |
+| Decide whether tools like ruff, dvc, hpccm, pre-commit, nextflow, or quarto are project-local or global | `developer-tool-installation-policy` |
 | Design a scientific command-line interface | `scientific-cli-design` |
 | Apply coding conventions when repository guidance is absent | `scientific-code-style` |
 | Improve README, usage docs, algorithm docs, or workflow docs | `scientific-documentation` |
@@ -94,6 +95,10 @@ especially Nextflow-first workflows that should scale from laptops to HPC or
 cloud executors.
 
 ### Repository Baseline and CI
+
+Use `developer-tool-installation-policy` when deciding whether reusable CLI
+tools belong in project metadata, pre-commit or CI configuration, or isolated
+global installs.
 
 Use `project-repository-setup` for repository layout, root-file hygiene,
 `.gitignore`, local validation commands, and pre-commit hooks.

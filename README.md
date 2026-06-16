@@ -66,6 +66,10 @@ workflows. Those belong in a separate HPC operations skill package.
 
 ## Support Skills
 
+- `developer-tool-installation-policy`: use when deciding whether tools such as
+  `ruff`, `dvc`, `hpccm`, `pre-commit`, `nextflow`, or `quarto` belong in
+  project-local environments, CI/pre-commit configuration, or isolated global
+  installs.
 - `git-refactor-hygiene`: use when scientific-computing work involves moving,
   renaming, or reorganizing tracked files so Git history and staging stay
   clean.
@@ -80,6 +84,9 @@ See `ROUTING.md` for the full skill-selection guide.
 Use `scientific-accelerator-portability` when GPU or accelerator code must stay
 correct and maintainable across backends, hardware generations, drivers,
 compilers, and fallback paths.
+Use `developer-tool-installation-policy` when choosing whether reusable tools
+such as `ruff`, `dvc`, `hpccm`, `pre-commit`, `nextflow`, or `quarto` should be
+project-pinned or installed as isolated global CLIs.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
 Use `project-repository-setup` for baseline local hooks, repository layout, and

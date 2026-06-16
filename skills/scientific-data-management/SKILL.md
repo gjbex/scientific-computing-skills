@@ -152,6 +152,9 @@ Use the exact commands supported by the repository's DVC version. If DVC is not
 installed, inspect DVC metadata and state that runtime validation was not
 performed.
 
+Use `developer-tool-installation-policy` when deciding whether DVC is a
+project-contract dependency or only a global inspection tool.
+
 ## Alternatives to DVC
 
 Consider alternatives when they fit better:
