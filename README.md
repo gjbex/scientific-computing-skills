@@ -21,6 +21,9 @@ workflows. Those belong in a separate HPC operations skill package.
   configuration behavior, validation, logging, and output conventions.
 - `scientific-code-style`: reusable coding and validation defaults for
   scientific-computing repositories when project guidance is minimal.
+- `scientific-container-workflows`: Apptainer-first scientific container
+  workflows, with Docker or Podman as local options and HPCCM recipes as the
+  preferred source of truth for non-trivial definition files.
 - `scientific-documentation`: user and developer documentation for algorithms,
   assumptions, parameters, workflows, reproducibility, and performance context.
 - `scientific-io-and-data-formats`: scientific file layout, metadata,
@@ -62,6 +65,8 @@ Use `scientific-performance-portability` when an optimization must generalize
 beyond one machine or compiler.
 Use `scientific-reproducibility` when results need to be rerunnable and
 auditable.
+Use `scientific-container-workflows` when a scientific runtime needs portable
+container recipes, especially for Apptainer/Singularity on HPC systems.
 Use `scientific-workflow-automation` when ad hoc shell steps should become a
 version-controlled workflow, with Nextflow as the preferred default for
 multi-step pipelines.

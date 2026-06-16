@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Container Workflows"
+  short_description: "Build Apptainer-first scientific containers"
+  default_prompt: "Use $scientific-container-workflows to design or improve a scientific container workflow, preferring Apptainer/Singularity for HPC runtime and HPCCM recipes for non-trivial definition files."
