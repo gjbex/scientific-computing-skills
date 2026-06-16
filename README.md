@@ -1,5 +1,7 @@
 # Scientific Computing Skills
 
+[![DOI](https://zenodo.org/badge/1271558166.svg)](https://doi.org/10.5281/zenodo.20723946)
+
 `scientific-computing-skills` is a Codex plugin distribution for reusable
 scientific-software engineering workflows. It packages focused skills for
 building, testing, profiling, benchmarking, documenting, and reviewing
