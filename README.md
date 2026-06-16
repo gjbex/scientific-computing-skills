@@ -45,6 +45,9 @@ workflows. Those belong in a separate HPC operations skill package.
 - `git-refactor-hygiene`: use when scientific-computing work involves moving,
   renaming, or reorganizing tracked files so Git history and staging stay
   clean.
+- `project-repository-setup`: use when scientific-computing work needs a sane
+  repository baseline, including layout, root-file hygiene, local validation
+  commands, pre-commit hooks, and CI alignment.
 
 ## Skill Boundary Guide
 
@@ -64,6 +67,8 @@ scientific-computing-skills/
   .codex-plugin/plugin.json
   skills/
     git-refactor-hygiene/
+      SKILL.md
+    project-repository-setup/
       SKILL.md
     scientific-*/
       SKILL.md
