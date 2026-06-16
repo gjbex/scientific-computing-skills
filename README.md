@@ -40,6 +40,12 @@ workflows. Those belong in a separate HPC operations skill package.
 - `scientific-testing`: numerical, stochastic, regression, and
   parallel-consistency tests for scientific software.
 
+## Support Skills
+
+- `git-refactor-hygiene`: use when scientific-computing work involves moving,
+  renaming, or reorganizing tracked files so Git history and staging stay
+  clean.
+
 ## Skill Boundary Guide
 
 Use `scientific-testing` for correctness tests and regression protection.
@@ -57,6 +63,8 @@ auditable.
 scientific-computing-skills/
   .codex-plugin/plugin.json
   skills/
+    git-refactor-hygiene/
+      SKILL.md
     scientific-*/
       SKILL.md
 ```
