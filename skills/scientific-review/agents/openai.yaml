@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Review"
+  short_description: "Review scientific code for correctness and workflow risks"
+  default_prompt: "Use $scientific-review to review a scientific-computing repository, pull request, or code change for correctness, validation, reproducibility, performance, documentation, and release risks."
