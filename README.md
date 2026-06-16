@@ -11,6 +11,9 @@ workflows. Those belong in a separate HPC operations skill package.
 
 ## Included Skills
 
+- `scientific-accelerator-portability`: GPU and accelerator portability across
+  CUDA, HIP, SYCL, OpenACC, Kokkos, OpenMP offload, hardware generations,
+  drivers, compilers, and fallback paths.
 - `scientific-build-systems`: build-system configuration, compiler warnings,
   build types, sanitizers, dependencies, and portable CMake-style workflows.
 - `scientific-ci`: CI design for scientific projects, including compiler
@@ -72,6 +75,9 @@ workflows. Those belong in a separate HPC operations skill package.
 
 ## Skill Boundary Guide
 
+Use `scientific-accelerator-portability` when GPU or accelerator code must stay
+correct and maintainable across backends, hardware generations, drivers,
+compilers, and fallback paths.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
 Use `project-repository-setup` for baseline local hooks, repository layout, and

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Accelerator Portability"
+  short_description: "Keep GPU and accelerator code portable"
+  default_prompt: "Use $scientific-accelerator-portability to review or improve GPU and accelerator scientific code across CUDA, HIP, SYCL, OpenACC, Kokkos, OpenMP offload, fallback paths, and hardware/runtime assumptions."
