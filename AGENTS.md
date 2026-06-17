@@ -10,30 +10,21 @@ under support skills and must be documented separately in `README.md`.
 
 ## Development And Installation Checkouts
 
-Use this repository as the active development checkout. Feature work should
-happen here on short-lived feature branches based on the repository's current
-integration branch. For this repository, that branch is `development` unless
-the maintainer says otherwise. Run validation before merging or publishing.
+Follow `README.md` for the development checkout, plugin installation checkout,
+and update workflow. Follow `CONTRIBUTIONS.md` for branch scope, pull-request
+hygiene, and repository hygiene. Keep those files as the source of truth for
+human-facing workflow details.
 
-Before implementing a new fix, feature, refactor, or documentation concern,
-inspect `git status --short --branch` and create a focused branch from
-the intended integration branch unless the user explicitly asks to work
-directly on the current branch. Keep that branch to one concern.
+Agent-specific sanity checks:
 
-While working, watch for drift from the branch's stated intent. If a requested
-or discovered change would add a second concern to the branch or pull request,
-pause and warn the user. Propose either staying focused on the current concern
-or moving the new concern to a separate branch.
-
-Treat `~/plugins/scientific-computing-skills` as the Codex plugin installation
-checkout. It should normally stay on `main`, be updated from the released or
-merged state, and then be used for `codex plugin add
-scientific-computing-skills@personal`.
-
-Only install from a feature branch in `~/plugins/scientific-computing-skills`
-when intentionally testing unreleased skill behavior. Switch it back to `main`
-after that test so new Codex sessions do not accidentally load unfinished
-changes.
+- Inspect `git status --short --branch` before implementing, staging,
+  committing, pushing, or opening a pull request.
+- Keep each branch or direct integration-branch change to one concern unless
+  the maintainer explicitly chooses otherwise.
+- If work drifts from the current concern, pause and warn the user. Propose
+  either staying focused or moving the new concern to a separate branch.
+- Leave unrelated dirty or untracked files untouched unless the user explicitly
+  asks otherwise.
 
 ## Editing Rules
 
@@ -55,7 +46,8 @@ Run these before finishing changes:
 ```bash
 python3 tools/validate_plugin.py .
 python3 tools/validate_skills.py skills
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py
+python3 tools/validate_docs.py .
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py
 ```
 
 Use repo-local validators in `tools/`; do not make CI depend on a local

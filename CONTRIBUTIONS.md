@@ -99,7 +99,8 @@ Run the same checks used by CI before opening a pull request:
 ```bash
 python3 tools/validate_plugin.py .
 python3 tools/validate_skills.py skills
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
+python3 tools/validate_docs.py .
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py
 ```
 
 If you add new Python scripts, include them in the compile command and the
