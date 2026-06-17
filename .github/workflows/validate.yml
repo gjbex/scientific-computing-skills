@@ -25,5 +25,8 @@ jobs:
       - name: Validate skills
         run: python3 tools/validate_skills.py skills
 
+      - name: Validate documentation
+        run: python3 tools/validate_docs.py .
+
       - name: Compile bundled Python scripts
-        run: python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
+        run: python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py

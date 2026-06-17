@@ -259,10 +259,16 @@ Validate bundled skills with:
 python3 tools/validate_skills.py skills
 ```
 
+Validate documentation cross-references with:
+
+```bash
+python3 tools/validate_docs.py .
+```
+
 Compile bundled Python scripts:
 
 ```bash
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py
 ```
 
 See `CONTRIBUTIONS.md` for contribution scope, repository hygiene, and pull
