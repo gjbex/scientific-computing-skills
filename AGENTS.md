@@ -14,6 +14,16 @@ Use this repository as the active development checkout. Feature work should
 happen here on `development` or short-lived feature branches, with validation
 run before merging or publishing.
 
+Before implementing a new fix, feature, refactor, or documentation concern,
+inspect `git status --short --branch` and create a focused branch from
+`development` unless the user explicitly asks to work directly on the current
+branch. Keep that branch to one concern.
+
+While working, watch for drift from the branch's stated intent. If a requested
+or discovered change would add a second concern to the branch or pull request,
+pause and warn the user. Propose either staying focused on the current concern
+or moving the new concern to a separate branch.
+
 Treat `~/plugins/scientific-computing-skills` as the Codex plugin installation
 checkout. It should normally stay on `main`, be updated from the released or
 merged state, and then be used for `codex plugin add
