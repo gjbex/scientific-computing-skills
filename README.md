@@ -137,8 +137,8 @@ scientific-computing-skills/
 
 ## Development
 
-Use the project repository, such as
-`/home/gjb/Projects/scientific-computing-skills`, for active development on
+Use the project repository checkout (for example
+`~/Projects/scientific-computing-skills`) for active development on
 `development` or short-lived feature branches. Before implementing a new fix,
 feature, refactor, or documentation concern, inspect the current branch and
 create a focused branch from `development`. Keep each branch and pull request to
