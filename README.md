@@ -145,37 +145,59 @@ git clone https://github.com/gjbex/scientific-computing-skills.git \
   ~/plugins/scientific-computing-skills
 ```
 
-Create or update the personal Codex marketplace entry:
+If `~/plugins/scientific-computing-skills` already exists, inspect it before
+installing. A valid checkout should contain `.git`, `.codex-plugin/plugin.json`,
+and `skills/`:
 
 ```bash
-python3 ~/.codex/skills/.system/plugin-creator/scripts/create_basic_plugin.py \
-  scientific-computing-skills \
-  --path ~/plugins \
-  --with-marketplace \
-  --force
+find ~/plugins/scientific-computing-skills -maxdepth 2 -type f -print
 ```
 
-Install the plugin from the personal marketplace:
-
-```bash
-codex plugin add scientific-computing-skills@personal
-```
-
-Start a new Codex thread after installation so the newly installed skills are
-available in the session.
-
-## Updating
-
-Update the local checkout:
+If it is already a Git checkout, update it instead of cloning:
 
 ```bash
 git -C ~/plugins/scientific-computing-skills pull --ff-only
 ```
 
-Refresh the plugin version cachebuster and reinstall from the personal
-marketplace:
+If it is an old scaffold with only `.codex-plugin/plugin.json`, move it aside
+before cloning the real repository:
 
 ```bash
+mv ~/plugins/scientific-computing-skills \
+  ~/plugins/scientific-computing-skills.scaffold-backup-$(date -u +%Y%m%dT%H%M%SZ)
+
+git clone https://github.com/gjbex/scientific-computing-skills.git \
+  ~/plugins/scientific-computing-skills
+```
+
+Install or reinstall the plugin from the personal marketplace:
+
+```bash
+codex plugin add scientific-computing-skills@personal
+```
+
+Verify the installed source contains the bundled skills:
+
+```bash
+codex plugin list
+test -f ~/plugins/scientific-computing-skills/skills/git-refactor-hygiene/SKILL.md
+```
+
+Start a new Codex thread after installation so the newly installed skills are
+available in the session.
+
+Do not run `create_basic_plugin.py --force` against this repository. That helper
+is for creating a new plugin scaffold, and can overwrite a real checkout with an
+empty scaffold.
+
+## Updating
+
+Update the local checkout, refresh the plugin version cachebuster, and reinstall
+from the personal marketplace:
+
+```bash
+git -C ~/plugins/scientific-computing-skills pull --ff-only
+
 python3 ~/.codex/skills/.system/plugin-creator/scripts/update_plugin_cachebuster.py \
   ~/plugins/scientific-computing-skills
 
