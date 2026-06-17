@@ -28,7 +28,7 @@ Run these before finishing changes:
 ```bash
 python3 tools/validate_plugin.py .
 python3 tools/validate_skills.py skills
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/validate_plugin.py tools/validate_skills.py
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py
 ```
 
 Use repo-local validators in `tools/`; do not make CI depend on a local

@@ -183,6 +183,17 @@ codex plugin add scientific-computing-skills@personal
 
 Start a new Codex thread after reinstalling.
 
+## Release Metadata
+
+Update the plugin and citation release metadata together:
+
+```bash
+python3 tools/bump_version.py 0.2.0 --date 2026-06-17
+```
+
+The plugin validator checks that `.codex-plugin/plugin.json` and `CITATION.cff`
+use the same version.
+
 ## Validation
 
 Validate the plugin manifest with:
@@ -200,7 +211,7 @@ python3 tools/validate_skills.py skills
 Compile bundled Python scripts:
 
 ```bash
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py
 ```
 
 See `CONTRIBUTIONS.md` for contribution scope, repository hygiene, and pull

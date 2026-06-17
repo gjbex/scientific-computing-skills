@@ -77,6 +77,11 @@ update both human-facing and machine-readable metadata.
 - Use semantic versioning when the project has software-like compatibility
   expectations.
 - Keep release tags aligned with package or plugin version fields.
+- When a repository provides a release-metadata helper, use it instead of
+  hand-editing version fields across multiple files.
+- For plugin distributions, keep the plugin manifest version and
+  `CITATION.cff` version/date metadata aligned, and add or run a validator that
+  fails on drift.
 - Do not bump versions only to force local cache invalidation.
 - Keep pre-release labels explicit for experimental releases.
 - Document breaking changes, new features, fixes, and known limitations.
