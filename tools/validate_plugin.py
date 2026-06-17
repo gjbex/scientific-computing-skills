@@ -230,7 +230,9 @@ def extract_cff_scalar(text: str, key: str, errors: list[str]) -> str | None:
     if len(matches) > 1:
         errors.append(f"CITATION.cff contains multiple {key} fields")
         return None
-    return matches[0].strip().strip('"')
+    # Normalize by stripping both single and double quotes from the scalar value
+    return matches[0].strip().strip('"\'')
+
 
 
 def reject_todo_markers(value: Any, path: str, errors: list[str]) -> None:
