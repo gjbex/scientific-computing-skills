@@ -53,8 +53,10 @@ Before starting implementation, inspect the current branch and worktree:
 git status --short --branch
 ```
 
-Create a focused branch from `development` for the new concern unless you are
-already on an appropriate topic branch:
+Create a focused branch from the intended integration branch for the new
+concern unless you are already on an appropriate topic branch. This repository
+currently targets `development`; in other projects the target might be `main`,
+`trunk`, or a release branch:
 
 ```bash
 git switch development

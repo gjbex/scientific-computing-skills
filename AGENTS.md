@@ -11,13 +11,14 @@ under support skills and must be documented separately in `README.md`.
 ## Development And Installation Checkouts
 
 Use this repository as the active development checkout. Feature work should
-happen here on `development` or short-lived feature branches, with validation
-run before merging or publishing.
+happen here on short-lived feature branches based on the repository's current
+integration branch. For this repository, that branch is `development` unless
+the maintainer says otherwise. Run validation before merging or publishing.
 
 Before implementing a new fix, feature, refactor, or documentation concern,
 inspect `git status --short --branch` and create a focused branch from
-`development` unless the user explicitly asks to work directly on the current
-branch. Keep that branch to one concern.
+the intended integration branch unless the user explicitly asks to work
+directly on the current branch. Keep that branch to one concern.
 
 While working, watch for drift from the branch's stated intent. If a requested
 or discovered change would add a second concern to the branch or pull request,

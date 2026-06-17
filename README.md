@@ -138,17 +138,20 @@ scientific-computing-skills/
 ## Development
 
 Use the project repository checkout (for example
-`~/Projects/scientific-computing-skills`) for active development on
-`development` or short-lived feature branches. Before implementing a new fix,
-feature, refactor, or documentation concern, inspect the current branch and
-create a focused branch from `development`. Keep each branch and pull request to
-one concern so it can be reviewed, reverted, or released independently.
+`~/Projects/scientific-computing-skills`) for active development on short-lived
+feature branches based on the repository's intended integration branch. This
+repository currently uses `development` for that role; other projects may use
+`main`, `trunk`, or release branches. Before implementing a new fix, feature,
+refactor, or documentation concern, inspect the current branch and create a
+focused branch from the actual pull-request target. Keep each branch and pull
+request to one concern so it can be reviewed, reverted, or released
+independently.
 
 If work starts to drift from the branch's stated intent, stop and split the
 scope: either stay focused on the current concern or move the new concern to a
 separate branch. Make skill, metadata, and documentation changes in the
-development checkout, then run the validation commands before merging or
-publishing.
+development checkout for this repository, then run the validation commands
+before merging or publishing.
 
 Treat `~/plugins/scientific-computing-skills` as the local Codex plugin
 installation checkout. Keep it on `main` for normal use, update it from the
