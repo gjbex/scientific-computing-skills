@@ -34,6 +34,10 @@ description: Use when reorganizing, moving, renaming, staging, committing, or
 
 - Keep branches single-purpose: one bug fix, feature, refactor, documentation
   update, release chore, or validation change.
+- A short-lived topic branch is the default for new implementation work, but a
+  tiny mechanical release chore can be committed directly on an integration
+  branch when the maintainer explicitly chooses that path and the diff is
+  limited to the release metadata.
 - Treat remote tracking branches as the source of truth for pull-request scope.
   Before opening or updating a PR, check the commit list and diff against the
   target branch, for example `git log --oneline origin/development..HEAD` and
