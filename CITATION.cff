@@ -9,7 +9,7 @@ authors:
   - family-names: Bex
     given-names: Geert Jan
 email: geertjan.bex@uhasselt.be
-version: 0.2.0
+version: 0.2.1
 date-released: 2026-06-17
 license: Apache-2.0
 abstract: >-
