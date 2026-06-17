@@ -78,10 +78,29 @@ Keep the repository root focused on discoverability:
 - `CONTRIBUTING.md` when contribution workflow matters;
 - `.gitignore` for generated artifacts, caches, build trees, and local-only files;
 - `.editorconfig` when basic editor consistency is useful;
+- `AGENTS.md` when future Codex work should follow repository-specific
+  conventions or use domain skills;
 - one or a few project-level build/config entry points.
 
 Avoid dumping generated outputs, one-off scratch files, or many unrelated helper
 scripts into the root.
+
+## Agent Instructions
+
+For new scientific-computing repositories, add a concise root `AGENTS.md` unless
+the user declines or the repository already has equivalent agent guidance. The
+file should:
+
+- describe the repository scope and any source, test, docs, examples, and
+  generated-artifact boundaries;
+- point Codex agents at this scientific-computing skill set for domain work,
+  using the relevant `scientific-*` skills rather than generic software advice;
+- list the repository's normal validation commands once they exist;
+- avoid site-specific HPC login, scheduler, filesystem, account, allocation, or
+  cluster-host facts unless the target repository is explicitly site-local.
+
+Keep `AGENTS.md` short and stable. Prefer project conventions and validation
+commands over broad instructions that duplicate every skill.
 
 ## Pre-Commit and Quality Hooks
 

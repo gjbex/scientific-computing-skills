@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Repository Setup"
-  short_description: "Set up repo layout and baseline dev workflow"
-  default_prompt: "Use $project-repository-setup to improve a repository's structure, baseline config files, pre-commit hooks, and local development entry points, then summarize the setup and remaining tradeoffs."
+  short_description: "Set up repo layout, agent guidance, and dev workflow"
+  default_prompt: "Use $project-repository-setup to improve a repository's structure, baseline config files, root AGENTS.md guidance, pre-commit hooks, and local development entry points, then summarize the setup and remaining tradeoffs."

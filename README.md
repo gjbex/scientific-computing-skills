@@ -77,7 +77,8 @@ workflows. Those belong in a separate HPC operations skill package.
   clean.
 - `project-repository-setup`: use when scientific-computing work needs a sane
   repository baseline, including layout, root-file hygiene, local validation
-  commands, pre-commit hooks, and CI alignment.
+  commands, pre-commit hooks, CI alignment, and root `AGENTS.md` guidance that
+  points future agents at the scientific skill set.
 
 ## Skill Boundary Guide
 
@@ -91,9 +92,9 @@ such as `ruff`, `dvc`, `hpccm`, `pre-commit`, `nextflow`, or `quarto` should be
 project-pinned or installed as isolated global CLIs.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
-Use `project-repository-setup` for baseline local hooks, repository layout, and
-local command entry points. Use `scientific-ci` for CI job design and GitHub
-Actions workflow details.
+Use `project-repository-setup` for baseline local hooks, repository layout, root
+`AGENTS.md` guidance, and local command entry points. Use `scientific-ci` for CI
+job design and GitHub Actions workflow details.
 Use `scientific-profiling` when benchmark results need root-cause diagnosis.
 Use `scientific-data-analysis-and-visualization` when scientific outputs need
 defensible figures, tables, summaries, uncertainty handling, or comparison
