@@ -1,5 +1,7 @@
 # Scientific Computing Skills
 
+![Scientific Computing Skills: reusable Codex skills for scientific software engineering](assets/scientific-computing-skills-readme-banner.png)
+
 [![DOI](https://zenodo.org/badge/1271558166.svg)](https://doi.org/10.5281/zenodo.20723946)
 
 `scientific-computing-skills` is a Codex plugin distribution for reusable
