@@ -1,5 +1,7 @@
 # Scientific Computing Skills
 
+![Scientific Computing Skills: reusable Codex skills for scientific software engineering](assets/scientific-computing-skills-readme-banner.png)
+
 [![DOI](https://zenodo.org/badge/1271558166.svg)](https://doi.org/10.5281/zenodo.20723946)
 
 `scientific-computing-skills` is a Codex plugin distribution for reusable
@@ -135,6 +137,34 @@ scientific-computing-skills/
       SKILL.md
 ```
 
+## Development
+
+Use the project repository checkout (for example
+`~/Projects/scientific-computing-skills`) for active development on short-lived
+feature branches based on the repository's intended integration branch. This
+repository currently uses `development` for that role; other projects may use
+`main`, `trunk`, or release branches. Before implementing a new fix, feature,
+refactor, or documentation concern, inspect the current branch and create a
+focused branch from the actual pull-request target. Keep each branch and pull
+request to one concern so it can be reviewed, reverted, or released
+independently.
+
+If work starts to drift from the branch's stated intent, stop and split the
+scope: either stay focused on the current concern or move the new concern to a
+separate branch. Make skill, metadata, and documentation changes in the
+development checkout for this repository, then run the validation commands
+before merging or publishing.
+
+Treat `~/plugins/scientific-computing-skills` as the local Codex plugin
+installation checkout. Keep it on `main` for normal use, update it from the
+released or merged state, refresh the plugin cachebuster when needed, and then
+reinstall from the personal marketplace.
+
+Installing from a feature branch in `~/plugins/scientific-computing-skills` is
+useful only for intentional testing of unreleased skill behavior. Switch that
+checkout back to `main` after the test so new Codex sessions do not load
+unfinished changes accidentally.
+
 ## Installation
 
 Clone the plugin into the standard local plugin directory:
@@ -211,7 +241,7 @@ Start a new Codex thread after reinstalling.
 Update the plugin and citation release metadata together:
 
 ```bash
-python3 tools/bump_version.py 0.2.0 --date 2026-06-17
+python3 tools/bump_version.py <version> --date YYYY-MM-DD
 ```
 
 The plugin validator checks that `.codex-plugin/plugin.json` and `CITATION.cff`
@@ -231,10 +261,16 @@ Validate bundled skills with:
 python3 tools/validate_skills.py skills
 ```
 
+Validate documentation cross-references with:
+
+```bash
+python3 tools/validate_docs.py .
+```
+
 Compile bundled Python scripts:
 
 ```bash
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py
 ```
 
 See `CONTRIBUTIONS.md` for contribution scope, repository hygiene, and pull

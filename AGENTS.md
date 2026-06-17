@@ -8,6 +8,24 @@ Keep the package focused on portable scientific-software engineering workflows.
 Core skills use the `scientific-*` namespace. General workflow helpers belong
 under support skills and must be documented separately in `README.md`.
 
+## Development And Installation Checkouts
+
+Follow `README.md` for the development checkout, plugin installation checkout,
+and update workflow. Follow `CONTRIBUTIONS.md` for branch scope, pull-request
+hygiene, and repository hygiene. Keep those files as the source of truth for
+human-facing workflow details.
+
+Agent-specific sanity checks:
+
+- Inspect `git status --short --branch` before implementing, staging,
+  committing, pushing, or opening a pull request.
+- Keep each branch or direct integration-branch change to one concern unless
+  the maintainer explicitly chooses otherwise.
+- If work drifts from the current concern, pause and warn the user. Propose
+  either staying focused or moving the new concern to a separate branch.
+- Leave unrelated dirty or untracked files untouched unless the user explicitly
+  asks otherwise.
+
 ## Editing Rules
 
 - Preserve existing skill boundaries unless the user explicitly asks to split,
@@ -28,7 +46,8 @@ Run these before finishing changes:
 ```bash
 python3 tools/validate_plugin.py .
 python3 tools/validate_skills.py skills
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py
+python3 tools/validate_docs.py .
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py tools/validate_plugin.py tools/validate_skills.py tools/validate_docs.py
 ```
 
 Use repo-local validators in `tools/`; do not make CI depend on a local
