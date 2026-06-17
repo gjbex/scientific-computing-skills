@@ -1,4 +1,4 @@
 interface:
   display_name: "Git Refactor Hygiene"
-  short_description: "Preserve Git history during file reorganizations"
-  default_prompt: "Use $git-refactor-hygiene when moving or renaming tracked files so Git history and staging stay clean."
+  short_description: "Keep Git moves, branches, commits, and PRs clean"
+  default_prompt: "Use $git-refactor-hygiene when moving, renaming, staging, committing, or preparing a pull request so Git history, branch scope, atomic commits, and staging stay clean."

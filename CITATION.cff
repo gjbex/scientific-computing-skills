@@ -9,8 +9,8 @@ authors:
   - family-names: Bex
     given-names: Geert Jan
 email: geertjan.bex@uhasselt.be
-version: 0.1.0
-date-released: 2026-06-16
+version: 0.2.0
+date-released: 2026-06-17
 license: Apache-2.0
 abstract: >-
   Codex plugin distribution with skills for scientific-computing software

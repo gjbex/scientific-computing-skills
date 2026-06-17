@@ -73,11 +73,12 @@ workflows. Those belong in a separate HPC operations skill package.
   project-local environments, CI/pre-commit configuration, or isolated global
   installs.
 - `git-refactor-hygiene`: use when scientific-computing work involves moving,
-  renaming, or reorganizing tracked files so Git history and staging stay
-  clean.
+  renaming, staging, committing, or preparing pull requests so Git history,
+  branch scope, atomic commits, and staging stay clean.
 - `project-repository-setup`: use when scientific-computing work needs a sane
   repository baseline, including layout, root-file hygiene, local validation
-  commands, pre-commit hooks, and CI alignment.
+  commands, pre-commit hooks, CI alignment, and root `AGENTS.md` guidance that
+  points future agents at the scientific skill set.
 
 ## Skill Boundary Guide
 
@@ -91,9 +92,10 @@ such as `ruff`, `dvc`, `hpccm`, `pre-commit`, `nextflow`, or `quarto` should be
 project-pinned or installed as isolated global CLIs.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
-Use `project-repository-setup` for baseline local hooks, repository layout, and
-local command entry points. Use `scientific-ci` for CI job design and GitHub
-Actions workflow details.
+Use `project-repository-setup` for baseline local hooks, repository layout, root
+`AGENTS.md` guidance, branch/commit hygiene expectations, and local command
+entry points. Use `scientific-ci` for CI job design and GitHub Actions workflow
+details.
 Use `scientific-profiling` when benchmark results need root-cause diagnosis.
 Use `scientific-data-analysis-and-visualization` when scientific outputs need
 defensible figures, tables, summaries, uncertainty handling, or comparison
@@ -182,6 +184,17 @@ codex plugin add scientific-computing-skills@personal
 
 Start a new Codex thread after reinstalling.
 
+## Release Metadata
+
+Update the plugin and citation release metadata together:
+
+```bash
+python3 tools/bump_version.py 0.2.0 --date 2026-06-17
+```
+
+The plugin validator checks that `.codex-plugin/plugin.json` and `CITATION.cff`
+use the same version.
+
 ## Validation
 
 Validate the plugin manifest with:
@@ -199,7 +212,7 @@ python3 tools/validate_skills.py skills
 Compile bundled Python scripts:
 
 ```bash
-python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py
+python3 -m py_compile skills/scientific-cli-benchmark/scripts/simple_benchmark.py tools/bump_version.py
 ```
 
 See `CONTRIBUTIONS.md` for contribution scope, repository hygiene, and pull

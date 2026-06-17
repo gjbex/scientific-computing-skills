@@ -43,6 +43,10 @@ When adding or changing a skill:
 
 ## Repository Hygiene
 
+Keep branches single-purpose and commits atomic. A branch should be easy to
+summarize as one fix, feature, refactor, documentation update, release chore, or
+validation change. Split unrelated work into separate commits or branches.
+
 Use Git rename hygiene for reorganizations:
 
 ```bash
@@ -62,6 +66,10 @@ git diff --cached --summary
 Keep generated files out of commits. In particular, do not commit
 `__pycache__/`, `*.pyc`, virtual environments, build directories, logs, or local
 secret/config files.
+
+Before opening a pull request, inspect the diff for unrelated themes, generated
+artifacts, large mechanical changes mixed with semantic edits, or changes that
+cross multiple skill boundaries without one clear purpose.
 
 ## Validation
 
@@ -87,6 +95,8 @@ work from this project, cite it using `CITATION.cff`.
 ## Pull Request Checklist
 
 - The skill or support-skill boundary is clear.
+- The branch has one purpose, and commits are atomic enough to review or revert
+  independently.
 - Public documentation is updated when users need to know about the change.
 - Validation commands pass locally.
 - No generated artifacts or local-only files are included.

@@ -52,6 +52,7 @@ def validate_plugin(root: Path) -> list[str]:
 
     reject_todo_markers(manifest, "$", errors)
     validate_manifest(root, manifest, errors)
+    validate_citation_metadata(root, manifest, errors)
     return errors
 
 
@@ -195,6 +196,43 @@ def validate_url_field(
     field = f"{prefix}.{key}" if prefix else key
     if not isinstance(value, str) or not value.startswith("https://"):
         errors.append(f"{field} must be an https:// URL")
+
+
+def validate_citation_metadata(
+    root: Path, manifest: dict[str, Any], errors: list[str]
+) -> None:
+    citation_path = root / "CITATION.cff"
+    if not citation_path.exists():
+        return
+
+    try:
+        citation = citation_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        errors.append(f"could not read CITATION.cff: {exc}")
+        return
+
+    citation_version = extract_cff_scalar(citation, "version", errors)
+    if citation_version and manifest.get("version") != citation_version:
+        errors.append(
+            "CITATION.cff version must match .codex-plugin/plugin.json version"
+        )
+
+    release_date = extract_cff_scalar(citation, "date-released", errors)
+    if release_date and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", release_date):
+        errors.append("CITATION.cff date-released must use YYYY-MM-DD format")
+
+
+def extract_cff_scalar(text: str, key: str, errors: list[str]) -> str | None:
+    matches = re.findall(rf"(?m)^{re.escape(key)}:\s*(.+?)\s*$", text)
+    if not matches:
+        errors.append(f"CITATION.cff missing {key}")
+        return None
+    if len(matches) > 1:
+        errors.append(f"CITATION.cff contains multiple {key} fields")
+        return None
+    # Normalize by stripping both single and double quotes from the scalar value
+    return matches[0].strip().strip('"\'')
+
 
 
 def reject_todo_markers(value: Any, path: str, errors: list[str]) -> None:
