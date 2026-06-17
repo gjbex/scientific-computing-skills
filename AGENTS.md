@@ -8,6 +8,22 @@ Keep the package focused on portable scientific-software engineering workflows.
 Core skills use the `scientific-*` namespace. General workflow helpers belong
 under support skills and must be documented separately in `README.md`.
 
+## Development And Installation Checkouts
+
+Use this repository as the active development checkout. Feature work should
+happen here on `development` or short-lived feature branches, with validation
+run before merging or publishing.
+
+Treat `~/plugins/scientific-computing-skills` as the Codex plugin installation
+checkout. It should normally stay on `main`, be updated from the released or
+merged state, and then be used for `codex plugin add
+scientific-computing-skills@personal`.
+
+Only install from a feature branch in `~/plugins/scientific-computing-skills`
+when intentionally testing unreleased skill behavior. Switch it back to `main`
+after that test so new Codex sessions do not accidentally load unfinished
+changes.
+
 ## Editing Rules
 
 - Preserve existing skill boundaries unless the user explicitly asks to split,

@@ -135,6 +135,24 @@ scientific-computing-skills/
       SKILL.md
 ```
 
+## Development
+
+Use the project repository, such as
+`/home/gjb/Projects/scientific-computing-skills`, for active development on
+`development` or short-lived feature branches. Make skill, metadata, and
+documentation changes there, then run the validation commands before merging or
+publishing.
+
+Treat `~/plugins/scientific-computing-skills` as the local Codex plugin
+installation checkout. Keep it on `main` for normal use, update it from the
+released or merged state, refresh the plugin cachebuster when needed, and then
+reinstall from the personal marketplace.
+
+Installing from a feature branch in `~/plugins/scientific-computing-skills` is
+useful only for intentional testing of unreleased skill behavior. Switch that
+checkout back to `main` after the test so new Codex sessions do not load
+unfinished changes accidentally.
+
 ## Installation
 
 Clone the plugin into the standard local plugin directory:
