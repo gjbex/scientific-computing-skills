@@ -10,6 +10,10 @@ description: Use when reorganizing, moving, renaming, staging, committing, or
 ## Workflow
 
 1. Check status first with `git status --short`.
+1. Before implementation starts, confirm the work is on a focused branch for
+   the requested concern. If it is still on an integration branch such as
+   `development` or `main`, create a short-lived topic branch from the intended
+   base unless the user explicitly wants to work in place.
 1. Check the current branch and compare it with its base when practical before
    committing or preparing a pull request.
 1. For tracked files or directories, use `git mv <old> <new>` rather than plain
@@ -28,6 +32,9 @@ description: Use when reorganizing, moving, renaming, staging, committing, or
   update, release chore, or validation change.
 - Keep commits atomic: each commit should explain one coherent reason for the
   changed files and should be revertible without taking unrelated work with it.
+- Watch for scope drift while working. If the branch's diff starts to include a
+  second concern, warn the user and propose either staying focused on the
+  current concern or moving the new concern to a separate branch.
 - Separate mechanical moves or generated refreshes from semantic edits when
   practical.
 - If a change touches unrelated skill boundaries, build files, documentation,
