@@ -39,8 +39,19 @@ def main() -> None:
         raise SystemExit("--date must use YYYY-MM-DD format")
 
     root = Path(args.plugin_root)
-    update_plugin_manifest(root / ".codex-plugin" / "plugin.json", args.version)
-    update_citation(root / "CITATION.cff", args.version, args.date)
+    manifest_path = root / ".codex-plugin" / "plugin.json"
+    citation_path = root / "CITATION.cff"
+
+    # Fail fast before making any edits so versions can't drift on error.
+    try:
+        json.loads(manifest_path.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise SystemExit(f"missing {manifest_path}") from exc
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"{manifest_path} is not valid JSON: {exc}") from exc
+
+    update_citation(citation_path, args.version, args.date)
+    update_plugin_manifest(manifest_path, args.version)
     print(f"Updated release metadata to {args.version} ({args.date})")
 
 
