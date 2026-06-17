@@ -73,8 +73,8 @@ workflows. Those belong in a separate HPC operations skill package.
   project-local environments, CI/pre-commit configuration, or isolated global
   installs.
 - `git-refactor-hygiene`: use when scientific-computing work involves moving,
-  renaming, or reorganizing tracked files so Git history and staging stay
-  clean.
+  renaming, staging, committing, or preparing pull requests so Git history,
+  branch scope, atomic commits, and staging stay clean.
 - `project-repository-setup`: use when scientific-computing work needs a sane
   repository baseline, including layout, root-file hygiene, local validation
   commands, pre-commit hooks, CI alignment, and root `AGENTS.md` guidance that
@@ -93,8 +93,9 @@ project-pinned or installed as isolated global CLIs.
 Use `scientific-testing` for correctness tests and regression protection.
 Use `scientific-cli-benchmark` for measured runtime comparisons.
 Use `project-repository-setup` for baseline local hooks, repository layout, root
-`AGENTS.md` guidance, and local command entry points. Use `scientific-ci` for CI
-job design and GitHub Actions workflow details.
+`AGENTS.md` guidance, branch/commit hygiene expectations, and local command
+entry points. Use `scientific-ci` for CI job design and GitHub Actions workflow
+details.
 Use `scientific-profiling` when benchmark results need root-cause diagnosis.
 Use `scientific-data-analysis-and-visualization` when scientific outputs need
 defensible figures, tables, summaries, uncertainty handling, or comparison

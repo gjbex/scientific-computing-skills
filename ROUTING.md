@@ -32,6 +32,7 @@ primary intent, then use secondary skills for follow-up implementation details.
 | Prepare public release, citation metadata, DOI, tags, or release notes | `scientific-release-and-publication` |
 | Set up repository baseline, local hooks, layout, and developer commands | `project-repository-setup` |
 | Move or rename tracked files while preserving Git history | `git-refactor-hygiene` |
+| Check whether a branch, commit, or pull request mixes unrelated changes | `git-refactor-hygiene` |
 
 ## Boundary Rules
 
@@ -101,7 +102,11 @@ tools belong in project metadata, pre-commit or CI configuration, or isolated
 global installs.
 
 Use `project-repository-setup` for repository layout, root-file hygiene,
-`.gitignore`, local validation commands, and pre-commit hooks.
+`.gitignore`, local validation commands, branch/commit hygiene expectations, and
+pre-commit hooks.
+
+Use `git-refactor-hygiene` when staging, committing, or preparing pull requests
+could mix unrelated changes, or when tracked files are moved or renamed.
 
 Use `scientific-ci` for CI job design, build/test matrices, GitHub Actions,
 artifacts, sanitizer jobs, documentation checks, and scientific validation in

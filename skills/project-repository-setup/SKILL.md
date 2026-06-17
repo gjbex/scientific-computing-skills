@@ -145,6 +145,15 @@ surface clear even if internals remain tool-specific.
 Repository structure should make it obvious what humans edit and what tools
 produce.
 
+## Branch and Commit Hygiene
+
+- Document repository expectations for single-purpose branches and atomic
+  commits when contributors or agents regularly prepare pull requests.
+- Encourage agents to inspect `git status --short` before staging and to warn
+  when unrelated dirty files would pollute a commit or pull request.
+- Use `git-refactor-hygiene` for move/rename work and for branch, staging,
+  commit, or pull-request scope checks.
+
 ## Configuration Files
 
 - Place tool configuration where the tool and repository conventions expect it.
