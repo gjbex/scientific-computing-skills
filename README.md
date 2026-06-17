@@ -241,7 +241,7 @@ Start a new Codex thread after reinstalling.
 Update the plugin and citation release metadata together:
 
 ```bash
-python3 tools/bump_version.py 0.2.0 --date 2026-06-17
+python3 tools/bump_version.py <version> --date YYYY-MM-DD
 ```
 
 The plugin validator checks that `.codex-plugin/plugin.json` and `CITATION.cff`
